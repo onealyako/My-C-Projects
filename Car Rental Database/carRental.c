@@ -1,20 +1,18 @@
 /*
  O'Neal Yako
- 1003370
  Tuesday, October 9, 2018
- A2, Q1
  */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 
-/*Global Variables*/
-struct node* head; /* Global variable head for available for rent cars*/
-struct node2* head_nodeTwo; /*Global variable head for the rented list*/
-struct node3* head_nodeThree; /*Global variable head for the repair list*/
+// Global Variables
+struct node* head; // Global variable head for available for rent cars
+struct node2* head_nodeTwo; // Global variable head for the rented list
+struct node3* head_nodeThree; // Global variable head for the repair list
 
-/* This structure is for the available for rent cars */
+// This structure is for the available for rent cars 
 typedef struct node
 {
     int mileage;
@@ -22,14 +20,14 @@ typedef struct node
     struct node *next;
 }new_car;
 
-/*This structure is rented list */
+// This structure is rented list 
 typedef struct node2
 {
     int expectedDate;
     struct node2 *next;
 }rented;
 
-/* this structure is repair list */
+// this structure is repair list 
 typedef struct node3
 {
     int mileage_repairList;
@@ -37,7 +35,7 @@ typedef struct node3
     struct node3 *next;
 }repair;
 
-/* This is for adding a new car to available for rent list */
+// This is for adding a new car to available for rent list 
 void insert(int carMileage, char carPlate[8])
 {
     new_car * temp = malloc(sizeof(struct node));
@@ -47,7 +45,7 @@ void insert(int carMileage, char carPlate[8])
     head = temp;
 }
 
-/* This is for inserting (adding a car) to the rented list */
+// This is for inserting (adding a car) to the rented list 
 void insertRented(int returnDate)
 {
     rented * temp = malloc(sizeof(struct node2));
@@ -56,7 +54,7 @@ void insertRented(int returnDate)
     head_nodeTwo = temp;
 }
 
-/* This is for inserting a car into the repair list */
+// This is for inserting a car into the repair list 
 void insertRepair(int carMileage, char carPlate[8])
 {
     repair * temp = malloc(sizeof(struct node));
@@ -66,7 +64,7 @@ void insertRepair(int carMileage, char carPlate[8])
     head_nodeThree = temp;
 }
 
-/*This prints when a new car was added to available for rent list.*/
+// This prints when a new car was added to available for rent list.
 void print_addCar()
 {
     new_car * temp = head;
@@ -79,7 +77,7 @@ void print_addCar()
     printf("\n");
 
 }
-/*This function computes the transaction charge when user inputs 2 and returns the car to available*/
+// This function computes the transaction charge when user inputs 2 and returns the car to available
 void print_transaction()
 {
     new_car * temp = head;
@@ -101,7 +99,7 @@ void print_transaction()
     }
 }
 
-/* This function pushes the new car to the available for rent list */
+// This function pushes the new car to the available for rent list 
 void pushCar(int newCarMileage, char newPlates[8])
 {
     new_car *temp = malloc(sizeof(struct node));
@@ -110,7 +108,7 @@ void pushCar(int newCarMileage, char newPlates[8])
     temp->next = head;
 }
 
-/* This function pushes the returned car to the available for rent list if user inputs 3*/
+// This function pushes the returned car to the available for rent list if user inputs 3
 void pushCar_repairList(int newCarMileage, char newPlates[8])
 {
     repair *temp = malloc(sizeof(struct node3));
@@ -140,7 +138,7 @@ void deleteCar_repairList(char newPlates[8])
 }
  */
 
-/* This funciton pops a car out of the available list */
+// This funciton pops a car out of the available list 
 void popCar_availableList(int carMileage, char newPlates[8])
 {
     new_car *temp;
@@ -158,11 +156,11 @@ void popCar_availableList(int carMileage, char newPlates[8])
     /*free(temp);*/
 }
 
-/* This function displays a message to the user when the user rents a car */
+// This function displays a message to the user when the user rents a car 
 void print_rentedCar()
 {
     
-    /*rented * temp = head_nodeTwo;*/
+    // rented * temp = head_nodeTwo;
     printf("The first available car was rented.\n");
     
     
@@ -191,7 +189,7 @@ void print_repairList()
     printf("\n");
 }
 
-/* This function prints the list information to the user */
+// This function prints the list information to the user 
 void print_allLists()
 {
     
@@ -200,7 +198,7 @@ void print_allLists()
     repair *temp3 = head_nodeThree;
     
     
-    /*Available-For-Rent List*/
+    // Available-For-Rent List
     if (temp == NULL)
     {
         printf("\t*** Available-for-Rent List ***\n");
@@ -217,7 +215,7 @@ void print_allLists()
         temp = temp->next;
     }
 
-    /*Rented List*/
+    // Rented List
     if (temp2 == NULL)
     {
         printf("\t*** Rented List ***\n");
@@ -234,7 +232,7 @@ void print_allLists()
         temp2 = temp2->next;
     }
     
-    /*Repair List*/
+    // Repair List
     if (temp3 == NULL)
     {
         printf("\t*** Repair List *** \n");
@@ -253,7 +251,7 @@ void print_allLists()
     
 }
 
-/* This function takes in the user input */
+// This function takes in the user input 
 void userInputFunct()
 {
     int userInput = 0;
@@ -364,7 +362,7 @@ struct new_car* readFile_newCar(struct new_car * carsAvailable)
 */
 int main()
 {
-    userInputFunct(); /* Calls the function that prompts the user for input */
+    userInputFunct(); // Calls the function that prompts the user for input
    
     return 0;
 }
