@@ -1,6 +1,5 @@
 /*
  O'Neal Yako
- 1003370
  Tuesday, October 9, 2018
  */
 #include<stdio.h>
