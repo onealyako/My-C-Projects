@@ -20,6 +20,7 @@ void init(stack *s)
     s->top = -1;
 }
 
+// This function performs a push. 
 void push(stack *s, char expr)
 {
     if (s->top == 49)
@@ -33,6 +34,7 @@ void push(stack *s, char expr)
     }
 }
 
+// This function performs a pop.
 int pop (stack *s)
 {
     char expr;
@@ -50,7 +52,7 @@ int pop (stack *s)
     }
 }
 
-/* This functions performs an operation and returns output */
+// This functions performs an operation and returns output 
 int performEval(int operand1, int operand2, char operator)
 {
     if (operator == '+')
@@ -95,7 +97,7 @@ void userInputFunct()
     int operand2=0;
     int evaluate;
     
-    /* Prompt user to enter postfix expression */
+    // Prompt user to enter postfix expression 
     printf("Enter Postfix Expression: \n");
     scanf("%s", expr);
     
@@ -109,7 +111,7 @@ void userInputFunct()
         }
         data = expr[i];
         
-        /* Checks if there is a digit in the expression inputted by the user */
+        // Checks if there is a digit in the expression inputted by the user 
         if (isdigit(data))
         {
             ope = data-48;
@@ -126,13 +128,14 @@ void userInputFunct()
     
     result = pop(&s);
    
-    /* Result */
+    // Result
     printf("\nThe postfix result is: %d\n", result);
 }
 
 int main()
 {
-    userInputFunct(); /*This prompts user to input postfix exp. */
+    // This prompts user to input postfix exp.
+    userInputFunct();
   
     return 0;
 }
