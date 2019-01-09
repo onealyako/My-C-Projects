@@ -2,7 +2,6 @@
  O'Neal Yako
  1003370
  Tuesday, October 9, 2018
- A2, Q2
  */
 #include<stdio.h>
 #include<string.h>
