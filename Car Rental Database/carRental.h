@@ -1,8 +1,6 @@
 /*
  *O'Neal Yako
- *1003370
  *Tuesday, October 9, 2018
- *A2, Q1
 */
 
 #ifndef q1_H_INCLUDED
