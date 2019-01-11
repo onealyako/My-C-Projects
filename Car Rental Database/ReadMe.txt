@@ -1,15 +1,8 @@
 O'Neal Yako
-1003370
-Sunday, October 14, 2018 
-Assignment 2 
+
 
 How to Use:
 	- Use the makefile to compile both programs
-	- Use 'make all' to create q1 & q2
-*********
-Question 1
-*********
-	- This programs (./q1) displays the menu options for a CarRental service provider. 
 	
 Output will first be the menu:
 	
@@ -95,18 +88,4 @@ Plate Number: Johnnny, Car Mileage: 78233
 If user choice is 7:
 **********
 Program exits. 
-**********
-
-
-*********
-Question 2
-*********
-	- This program is ./q2 displays the solution to a postfix expression that is provided by the user.
-
-Sample Output:
-**********
-Enter Postfix Expression: 
-13+
-
-The postfix result is: 4
 **********
